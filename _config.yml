@@ -110,11 +110,14 @@ theme: matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+## deploy 指定 git 用户和邮箱请设置 name 和 email， 如果工程目录下已经生成了 .deploy_git 目录， 需要删除目录后再执行 hexo d
 deploy:
 - type: git
   repository:
     github: git@github.com:yibiner/yibiner.github.io.git
   branch: master
+  name: yibin
+  email: yibin.yaang@gmail.com
 - type: baidu_url_submitter
 
 

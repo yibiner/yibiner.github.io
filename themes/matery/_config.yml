@@ -240,11 +240,11 @@ postCalendar: true
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
   enable: true
-  owner: yibin
+  owner: yibiner
   repo: yibiner.github.io
   oauth:
-    clientId: 292c2be9166548ae67cb  # gitalk配置，需要填写
-    clientSecret: a9c5927e91d49134135fe1f58b93660c4131db36  # gitalk配置，需要填写
+    clientId:   # gitalk配置，需要填写
+    clientSecret:   # gitalk配置，需要填写
   admin: yibiner
 
 # the Gitment config，default disabled

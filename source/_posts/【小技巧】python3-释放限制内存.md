@@ -6,7 +6,7 @@ toc: true
 mathjax: true
 date: 2020-09-16 19:42:13
 password:
-summary:
+summary: 使用Python脚本自动拉取日志并提取有用字段数据时，会因为需要统计数据的日志文件过多，导致运行时候脚本占用过多内存
 tags:
 - Python
 - 内存
@@ -48,3 +48,8 @@ def limit_memory(maxsize):
 limit_memory(2*1024*1024*1024)
 ```
 
+
+
+
+
+*如果觉得本文对你有所帮助，欢迎点击右上角GitHub图标给个Star呗~*

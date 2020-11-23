@@ -1,5 +1,7 @@
 https://yibiner.github.io/2020/11/22/java-atomiclong-longadder-xing-neng-dui-bi/
+https://yibiner.github.io/2020/11/01/qi-ta-xiao-mi-6-jie-bl-suo-huo-qu-root-quan-xian/
+https://yibiner.github.io/2020/10/25/qi-ta-smartgit-shen-qing-fei-shang-ye-ban-zheng-shu/
 https://yibiner.github.io/2020/10/18/kai-xiang-sonoff-zigbee-tao-zhuang-chu-ti-yan/
 https://yibiner.github.io/2020/10/08/unraid-nas-xiao-zhu-ji-pei-zhi-fen-xiang/
-https://yibiner.github.io/2020/09/16/xiao-ji-qiao-python3-shi-fang-xian-zhi-nei-cun/
+https://yibiner.github.io/2020/09/16/python3-dan-jiao-ben-yun-xing-shi-xian-zhi-nei-cun/
 https://yibiner.github.io/2020/09/13/java-xian-cheng-chi-dai-ma-de-yi-ci-shen-ru-fen-xi/

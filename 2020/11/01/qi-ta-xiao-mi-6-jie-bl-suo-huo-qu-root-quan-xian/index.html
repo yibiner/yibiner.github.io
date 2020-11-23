@@ -4,12 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="【小技巧】python3 释放、限制内存, yibin 物联网 JAVA 后台开发">
+    <meta name="keywords" content="【其他】小米6解BL锁，获取ROOT权限, yibin 物联网 JAVA 后台开发">
     <!-- <meta name="baidu-site-verification" content="fmlEuI34ir" />
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" />
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
-    <meta name="description" content="前言使用Python脚本自动拉取日志并提取有用字段数据时，会因为需要统计数据的日志文件过多，导致运行时候脚本占用过多内存。
-比如日志文件是每小时进行一次归档，单个日志文件1GB，需要获取一天内的日志统计信息，那将会有24GB日志信息，如果在">
+    <meta name="description" content="前言最近换手机，想把之前一直用的小米6给 root 了，刷个机方便之后折腾。
+小米有一点我比较喜欢的就是至今（2020年11月7日）还有官方解锁渠道，手里有旧手机，或者就是想折腾的人也能有较为方便的获取 root 权限的途径（安卓手机拿到 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>【小技巧】python3 释放、限制内存 | Yibin&#39;s blog</title>
+    <title>【其他】小米6解BL锁，获取ROOT权限 | Yibin&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -327,13 +327,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        【小技巧】python3 释放、限制内存
+                        【其他】小米6解BL锁，获取ROOT权限
                     </div>
                 </div>
             </div>
@@ -444,12 +444,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Python/" target="_blank">
-                            <span class="chip bg-color">Python</span>
+                        <a href="/tags/其他/" target="_blank">
+                            <span class="chip bg-color">其他</span>
                         </a>
                         
-                        <a href="/tags/内存/" target="_blank">
-                            <span class="chip bg-color">内存</span>
+                        <a href="/tags/刷机/" target="_blank">
+                            <span class="chip bg-color">刷机</span>
                         </a>
                         
                     </div>
@@ -460,8 +460,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/小技巧/" class="post-category" target="_blank">
-                            小技巧
+                        <a href="/categories/折腾/" class="post-category" target="_blank">
+                            折腾
                         </a>
                         
                     </div>
@@ -472,7 +472,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-16
+                    2020-11-01
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -486,14 +486,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    259
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
                 
@@ -509,20 +509,214 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用Python脚本自动拉取日志并提取有用字段数据时，会因为需要统计数据的日志文件过多，导致运行时候脚本占用过多内存。</p>
-<p>比如日志文件是每小时进行一次归档，单个日志文件1GB，需要获取一天内的日志统计信息，那将会有24GB日志信息，如果在8GB内存机器上分析，同时还有其他任务在运行，最好能直接限制单个脚本的内存占用。</p>
-<h2 id="释放、限制内存"><a href="#释放、限制内存" class="headerlink" title="释放、限制内存"></a>释放、限制内存</h2><p>释放内存： 读取分析完单个文件后，在读取分析下个文件前及时del</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">for</span> filename <span class="token keyword">in</span> files<span class="token punctuation">:</span>
-        <span class="token keyword">with</span> open<span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
-            lines <span class="token operator">=</span> f<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        tmpdata <span class="token operator">=</span> dealwithdata<span class="token punctuation">(</span>lines<span class="token punctuation">)</span>
-        <span class="token keyword">del</span> lines<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>单个脚本限制内存：避免脚本将剩余内存全部使用完</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">limit_memory</span><span class="token punctuation">(</span>maxsize<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    _<span class="token punctuation">,</span> hard <span class="token operator">=</span> resource<span class="token punctuation">.</span>getrlimit<span class="token punctuation">(</span>resource<span class="token punctuation">.</span>RLIMIT_AS<span class="token punctuation">)</span>
-    resource<span class="token punctuation">.</span>setrlimit<span class="token punctuation">(</span>resource<span class="token punctuation">.</span>RLIMIT_AS<span class="token punctuation">,</span> <span class="token punctuation">(</span>maxsize<span class="token punctuation">,</span> hard<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true"># 单位字节</span>
-limit_memory<span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span><span class="token number">1024</span><span class="token operator">*</span><span class="token number">1024</span><span class="token operator">*</span><span class="token number">1024</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近换手机，想把之前一直用的小米6给 root 了，刷个机方便之后折腾。</p>
+<p>小米有一点我比较喜欢的就是至今（2020年11月7日）还有官方解锁渠道，手里有旧手机，或者就是想折腾的人也能有较为方便的获取 root 权限的途径（安卓手机拿到 root 权限，可就想怎么折腾都可以了）。</p>
+<p>不过在 root 小米6的过程中也遇到了许多问题，这里记录一下给需要的同学一个参考。</p>
+<h2 id="基本环境"><a href="#基本环境" class="headerlink" title="基本环境"></a>基本环境</h2><p>手机：小米6 </p>
+<p>手机系统版本：MIUI11.0.5.0 稳定版</p>
+<img src="手机系统信息.jpg" alt="手机系统信息" style="zoom:50%;">
+
+
+
+<p>操作的电脑系统版本：</p>
+<pre class="line-numbers language-powershell"><code class="language-powershell">版本    Windows 10 专业版
+版本号    20H2
+安装日期    ‎2020<span class="token operator">/</span>‎6<span class="token operator">/</span>‎25
+操作系统版本    19042<span class="token punctuation">.</span>610
+体验    Windows Feature Experience Pack 120<span class="token punctuation">.</span>2212<span class="token punctuation">.</span>31<span class="token punctuation">.</span>0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="解BL锁"><a href="#解BL锁" class="headerlink" title="解BL锁"></a>解BL锁</h2><h3 id="正常流程下步骤"><a href="#正常流程下步骤" class="headerlink" title="正常流程下步骤"></a>正常流程下步骤</h3><ol>
+<li>先阅读下<a href="https://www.xiaomi.cn/post/4378807" target="_blank" rel="noopener">小米手机解锁 Bootloader 教程以及常见问题</a> ，了解下解锁 Bootloader 的基本步骤</li>
+<li>手机上操作，“设置 - 我的设备 - 所有参数” 连续按 MIUI版本，进入开发者模式</li>
+<li>手机上操作，“设置 - 更多设置 - 开发者选项 - 设备解锁状态”，进行账号绑定和确认状态</li>
+</ol>
+<img src="设备解锁状态-未解锁.jpg" alt="设备解锁状态-未解锁" style="zoom:50%;">
+
+
+
+<p><strong>注意：这个步骤需要断开wifi，使用手机流量操作。且账号要与步骤5中登录账号一致</strong></p>
+<ol start="4">
+<li>下载小米解锁工具，<a href="http://www.miui.com/unlock/download.html" target="_blank" rel="noopener">中文版</a>，<a href="https://en.miui.com/unlock/download_en.html" target="_blank" rel="noopener">英文版</a></li>
+</ol>
+<img src="下载小米解锁工具.png" alt="下载小米解锁工具" style="zoom:80%;">
+
+<ol start="5">
+<li>打开小米解锁工具，登录小米账号</li>
+</ol>
+<img src="登录小米解锁工具.png" alt="登录小米解锁工具" style="zoom:60%;">
+
+<ol start="6">
+<li><p>按照提示将手机关机后，长按音量下键 + 电源键进入 FastBoot 页面</p>
+</li>
+<li><p>安装驱动。要么将手机连接到电脑后自动安装好驱动，要么在小米解锁工具的设置页面手动安装驱动</p>
+</li>
+</ol>
+<img src="安装驱动.png" alt="安装驱动" style="zoom:60%;">
+
+<ol start="8">
+<li>若是一切正常，这时候解锁工具页面应该是以下样子（我没有这么幸运能一次成功）</li>
+</ol>
+<img src="手机连接上解锁工具.png" alt="手机连接上解锁工具" style="zoom:60%;">
+
+<ol start="9">
+<li>点击解锁。<strong>注意：解锁会将手机恢复出厂设置，请提前备份数据</strong></li>
+</ol>
+<img src="准备开始解锁.png" alt="准备开始解锁" style="zoom:60%;">
+
+<ol start="10">
+<li>等待解锁完成</li>
+</ol>
+<img src="解锁到95.png" alt="解锁到95%" style="zoom:60%;">
+
+
+
+<img src="解锁成功.png" alt="解锁成功" style="zoom:60%;">
+
+<ol start="11">
+<li>等到手机重启后查看 “设置 - 更多设置 - 开发者选项 - 设备解锁状态” （在开机的时候屏幕下方会有“unlock”字符）</li>
+</ol>
+<img src="解锁完成后手机状态.jpg" alt="解锁完成后手机状态" style="zoom:50%;">
+
+
+
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><ul>
+<li>问题一：手机连接上电脑后，在解锁工具中检测不到设备</li>
+</ul>
+<img src="检测不到手机.png" alt="检测不到手机" style="zoom:80%;">
+
+<p>尝试解决：</p>
+<ol>
+<li><p>换线，换USB接口，都无效</p>
+</li>
+<li><p>卸载驱动后重新安装，无效</p>
+</li>
+<li><p>换了另一台win10的电脑尝试，问题仍存在</p>
+</li>
+<li><p>只能通过重启电脑后才能检测到设备，如果重启后拔插了usb，又检测不到了</p>
+</li>
+</ol>
+<ul>
+<li>问题二：开始解锁后，验证设备信息到50%后验证失败（重启电脑后解锁工具能检测到手机，此时可以点击解锁）</li>
+</ul>
+<img src="50验证失败.png" alt="50验证失败" style="zoom:80%;">
+
+<p>尝试解决：</p>
+<ol>
+<li><p>换了老版本解锁工具，无效</p>
+</li>
+<li><p>参考<a href="https://miuiver.com/unable-to-get-phone-info/" target="_blank" rel="noopener">小米解锁无法获取手机信息解决方法</a>，换英文版的解锁工具，无效</p>
+</li>
+<li><p>根据问题一需要重启解锁工具才能显示检测到手机推测应该是驱动有问题。参考 <a href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=905825&amp;archive=1&amp;extra=page%3D1&amp;page=2" target="_blank" rel="noopener">https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=905825&amp;archive=1&amp;extra=page%3D1&amp;page=2</a>  中提到的解决方法继续以下的尝试解决方法</p>
+</li>
+<li><p>使用 <a href="http://zhushou.xiaomi.com/" target="_blank" rel="noopener">小米助手3.0</a>  安装驱动，使用原装线，无效</p>
+</li>
+<li><p>使用 <a href="https://www.52pojie.cn/forum.php?mod=viewthread&tid=1169553&highlight=%B8%E3%BB%FA%D6%FA%CA%D6" target="_blank" rel="noopener">搞机助手</a> 小米usb3.0 修复补丁，安装后重启电脑，再使用解锁工具解锁，【 成功】</p>
+</li>
+</ol>
+<img src="搞机助手安装修复补丁.png" alt="搞机助手安装修复补丁" style="zoom:80%;">
+
+<ol start="6">
+<li>下载360手机管家安装安卓驱动，未测试</li>
+<li>换win7系统，再使用解锁工具安装驱动解锁，未测试</li>
+</ol>
+<p>其他参考：</p>
+<ul>
+<li><p><a href="https://www.mi.com/service/special/BL-loc" target="_blank" rel="noopener">BL锁解锁失败必看</a></p>
+</li>
+<li><p><a href="https://www.v2ex.com/t/589868" target="_blank" rel="noopener">小米 9 解 bl 锁,在 fastboot 界面，解锁工具始终显示未连接</a></p>
+</li>
+</ul>
+<h2 id="线刷开发版系统"><a href="#线刷开发版系统" class="headerlink" title="线刷开发版系统"></a>线刷开发版系统</h2><ol>
+<li><p><a href="http://www.miui.com/shuaji-393.html" target="_blank" rel="noopener">通过线刷升级</a>，下载通用刷机工具</p>
+</li>
+<li><p><a href="https://www.xiaomi.cn/post/5896315" target="_blank" rel="noopener">小米全系列机型刷机包下载站汇总（长期更新）</a>，查找对应的系统包（我这里下载的是 9.8.22（9.0） 的线刷包，当前系统里面升级页面找不到卡刷包的入口）。说明：应官方要求，9.9.3版本往后暂不提供开发版下载方式，请大家移步<a href="https://web-alpha.vip.miui.com/page/info/mio/mio/internalTest?type=2" target="_blank" rel="noopener">内测中心</a>申请开发板公测/内侧体验。</p>
+</li>
+<li><p>在手机上操作：关机状态下，同时按住 音量下+电源键 进入Fastboot模式将手机USB连接电脑</p>
+</li>
+<li><p>线刷包下载完成后解压，打开线刷包文件夹，复制地址栏地址到刷机工具中，点击刷机</p>
+</li>
+</ol>
+<img src="线刷中.png" alt="线刷中" style="zoom:80%;">
+
+<ol start="5">
+<li>等待刷机完成。手机刷机完后会重启，第一次启动的时间有点久的，别以为是刷成砖了，耐心等待下。注意：这里有个坑爹的地方：默认情况下，解了BL锁右下角会选择全部删除并lock，这样线刷完后BL又锁上了。需要手动选择下全部删除选项</li>
+</ol>
+<img src="线刷完成.png" alt="线刷完成" style="zoom:80%;">
+
+<ol start="6">
+<li>查看手机是否已经是开发版本了</li>
+</ol>
+<img src="刷到开发板.jpg" alt="刷到开发板" style="zoom:60%;">
+
+
+
+<h2 id="开启ROOT权限"><a href="#开启ROOT权限" class="headerlink" title="开启ROOT权限"></a>开启ROOT权限</h2><p>参考<a href="https://www.xiaomi.cn/post/4471505" target="_blank" rel="noopener">【原创】小米手机获取完整ROOT权限教程</a></p>
+<ol>
+<li>打开手机管家</li>
+</ol>
+<img src="root1.png" alt="打开手机管家" style="zoom:60%;">
+
+<ol start="2">
+<li>点击应用管理</li>
+</ol>
+<img src="root2.png" alt="点击应用管理" style="zoom:60%;">
+
+<ol start="3">
+<li>点击权限</li>
+</ol>
+<img src="root3.png" alt="点击权限" style="zoom:60%;">
+
+<ol start="4">
+<li>点击开启ROOT权限</li>
+</ol>
+<img src="root4.png" alt="点击开启" style="zoom:60%;">
+
+<ol start="5">
+<li>开启ROOT。注意：需要网络连接，成功后会重启。如果更新了开发版系统，需要重新再开启ROOT</li>
+</ol>
+<img src="root5.png" alt="开启ROOT" style="zoom:60%;">
+
+<ol start="6">
+<li>解锁System分区。系统提供的ROOT功能并不是完整的；要获取完整的权限，必须解锁System分区！下载 <a href="https://www.coolapk.com/apk/com.lerist.syslock" target="_blank" rel="noopener">Syslock</a>，开启解锁后重启即可生效。（应用获取ROOT权限也提示太多次了吧，每次都要等待5s）</li>
+</ol>
+<img src="获取root权限提示太多.jpg" alt="获取root权限提示太多" style="zoom:50%;">
+
+
+
+<img src="解锁system.jpg" alt="解锁system" style="zoom:50%;">
+
+
+
+<h3 id="刷入TWRP"><a href="#刷入TWRP" class="headerlink" title="刷入TWRP"></a>刷入TWRP</h3><p>如果需要刷入TWRP，可以参考以下步骤。能获取ROOT权限应该开发版也够用了。如果刷第三方，还是可以装下TWRP</p>
+<ol>
+<li>下载TWRP。到 <a href="https://twrp.me/Devices/" target="_blank" rel="noopener">TWRP设备列表</a> 中找到小米（<a href="https://twrp.me/Devices/Xiaomi/" target="_blank" rel="noopener">Xiaomi</a>），进入找到<a href="https://twrp.me/xiaomi/xiaomimi6.html" target="_blank" rel="noopener">小米6机型</a>。</li>
+</ol>
+<img src="下载TWRP.png" alt="下载TWRP" style="zoom:80%;">
+
+<ol start="2">
+<li>手机开启USB调试模式</li>
+<li>打开搞机助手</li>
+</ol>
+<img src="打开搞机助手.png" alt="打开搞机助手" style="zoom:80%;">
+
+<ol start="4">
+<li>点击系统模式下重启到引导模式，或者直接音量下+电源键进入</li>
+</ol>
+<img src="刷入REC.png" alt="刷入REC" style="zoom:80%;">
+
+<ol start="5">
+<li>选择刚才下载的img</li>
+</ol>
+<img src="刷入REC1.png" alt="选择刚下载的文件" style="zoom:80%;">
+
+<ol start="6">
+<li>等待刷入成功，默认会重启进入引导模式</li>
+</ol>
+<img src="刷入REC成功.png" alt="刷入REC成功" style="zoom:80%;">
+
+
+
+
+
 <p><em>如果觉得本文对你有所帮助，欢迎点击右上角GitHub图标给个Star呗~</em></p>
 
             </div>
@@ -682,9 +876,9 @@ limit_memory<span class="token punctuation">(</span><span class="token number">2
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《【小技巧】python3 释放、限制内存》
+                    《【其他】小米6解BL锁，获取ROOT权限》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/09/16/xiao-ji-qiao-python3-shi-fang-xian-zhi-nei-cun/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/11/01/qi-ta-xiao-mi-6-jie-bl-suo-huo-qu-root-quan-xian/" property="cc:attributionName"
                rel="cc:attributionURL">
                 yibin
             </a> 采用
@@ -726,7 +920,7 @@ limit_memory<span class="token punctuation">(</span><span class="token number">2
         repo: 'yibiner.github.io',
         owner: 'yibiner',
         admin: "yibiner",
-        id: md5('2020/09/16/xiao-ji-qiao-python3-shi-fang-xian-zhi-nei-cun/'), // 修复使用gitalk 评论是 issue 长度限制50，报422错误，页面显示 Error: Validation Failed. 
+        id: md5('2020/11/01/qi-ta-xiao-mi-6-jie-bl-suo-huo-qu-root-quan-xian/'), // 修复使用gitalk 评论是 issue 长度限制50，报422错误，页面显示 Error: Validation Failed. 
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -751,78 +945,25 @@ limit_memory<span class="token punctuation">(</span><span class="token number">2
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/10/08/unraid-nas-xiao-zhu-ji-pei-zhi-fen-xiang/">
+                <a href="/2020/11/22/java-atomiclong-longadder-xing-neng-dui-bi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="【Unraid】NAS 小主机配置分享">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="【JAVA】AtomicLong LongAdder 性能对比">
                         
-                        <span class="card-title">【Unraid】NAS 小主机配置分享</span>
+                        <span class="card-title">【JAVA】AtomicLong LongAdder 性能对比</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            分享下个人用的 unraid 小主机以及一些配置
+                            LongAdder 性能一定比 AtomicLong 好吗？某一天，小bin接到了组长的神秘任务...
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-10-08
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-22
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/折腾/" class="post-category" target="_blank">
-                                    折腾
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Unraid/" target="_blank">
-                        <span class="chip bg-color">Unraid</span>
-                    </a>
-                    
-                    <a href="/tags/NAS/" target="_blank">
-                        <span class="chip bg-color">NAS</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/09/13/java-xian-cheng-chi-dai-ma-de-yi-ci-shen-ru-fen-xi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="【JAVA】线程池代码的一次深入分析">
-                        
-                        <span class="card-title">【JAVA】线程池代码的一次深入分析</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            本文记录了在一次定位线上系统问题时，根据发现的一些问题对JAVA中线程池代码做了下简单的分析
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-13
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -846,8 +987,57 @@ limit_memory<span class="token punctuation">(</span><span class="token number">2
                         <span class="chip bg-color">源码分析</span>
                     </a>
                     
-                    <a href="/tags/线程池/" target="_blank">
-                        <span class="chip bg-color">线程池</span>
+                    <a href="/tags/程序员的一天/" target="_blank">
+                        <span class="chip bg-color">程序员的一天</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/10/25/qi-ta-smartgit-shen-qing-fei-shang-ye-ban-zheng-shu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="【其他】SmartGit申请非商业版证书">
+                        
+                        <span class="card-title">【其他】SmartGit申请非商业版证书</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            SmartGit个人使用可以申请非商业证书，避免每次等待30s
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-10-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/其他/" class="post-category" target="_blank">
+                                    其他
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/其他/" target="_blank">
+                        <span class="chip bg-color">其他</span>
                     </a>
                     
                 </div>
@@ -1021,7 +1211,7 @@ limit_memory<span class="token punctuation">(</span><span class="token number">2
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">11.6k</span>
+            <span class="white-color">13.3k</span>
             
 
             <br>

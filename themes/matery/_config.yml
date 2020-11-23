@@ -243,8 +243,8 @@ gitalk:
   owner: yibiner
   repo: yibiner.github.io
   oauth:
-    clientId:   # gitalk配置，需要填写
-    clientSecret:   # gitalk配置，需要填写
+    clientId: 292c2be9166548ae67cb  # gitalk配置，需要填写
+    clientSecret: 957be2e8117077869917695e3751e7c029c5378c  # gitalk配置，需要填写
   admin: yibiner
 
 # the Gitment config，default disabled

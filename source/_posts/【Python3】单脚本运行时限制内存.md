@@ -1,5 +1,5 @@
 ---
-title: 【小技巧】python3 释放、限制内存
+title: 【Python3】单脚本运行时限制内存
 top: false
 cover: false
 toc: true

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yibin&#39;s blog</title>
+  
+  <subtitle>生命在于折腾~</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://yibiner.github.io/"/>
+  <updated>2020-11-23T14:40:56.752Z</updated>
+  <id>https://yibiner.github.io/</id>
+  
+  <author>
+    <name>yibin</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【JAVA】AtomicLong LongAdder 性能对比</title>
+    <link href="https://yibiner.github.io/2020/11/22/java-atomiclong-longadder-xing-neng-dui-bi/"/>
+    <id>https://yibiner.github.io/2020/11/22/java-atomiclong-longadder-xing-neng-dui-bi/</id>
+    <published>2020-11-22T06:32:22.000Z</published>
+    <updated>2020-11-23T14:40:56.752Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;LongAdder 性能一定比 AtomicLong 好吗？某一天，小bin接到了组长的神秘任务… &lt;/p&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="https://yibiner.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="JAVA" scheme="https://yibiner.github.io/tags/JAVA/"/>
+    
+      <category term="源码分析" scheme="https://yibiner.github.io/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    
+      <category term="程序员的一天" scheme="https://yibiner.github.io/tags/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E4%B8%80%E5%A4%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【开箱】Sonoff ZigBee 套装初体验</title>
+    <link href="https://yibiner.github.io/2020/10/18/kai-xiang-sonoff-zigbee-tao-zhuang-chu-ti-yan/"/>
+    <id>https://yibiner.github.io/2020/10/18/kai-xiang-sonoff-zigbee-tao-zhuang-chu-ti-yan/</id>
+    <published>2020-10-18T03:27:34.000Z</published>
+    <updated>2020-11-23T14:40:53.900Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;为自己的生活添加点智能设备？&lt;/p&gt;
+&lt;h2 id=&quot;外观&quot;&gt;&lt;a href=&quot;#外观&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="开箱" scheme="https://yibiner.github.io/categories/%E5%BC%80%E7%AE%B1/"/>
+    
+      <category term="折腾" scheme="https://yibiner.github.io/categories/%E5%BC%80%E7%AE%B1/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="开箱" scheme="https://yibiner.github.io/tags/%E5%BC%80%E7%AE%B1/"/>
+    
+      <category term="折腾" scheme="https://yibiner.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    
+      <category term="ZigBee" scheme="https://yibiner.github.io/tags/ZigBee/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Unraid】NAS 小主机配置分享</title>
+    <link href="https://yibiner.github.io/2020/10/08/unraid-nas-xiao-zhu-ji-pei-zhi-fen-xiang/"/>
+    <id>https://yibiner.github.io/2020/10/08/unraid-nas-xiao-zhu-ji-pei-zhi-fen-xiang/</id>
+    <published>2020-10-07T16:18:38.000Z</published>
+    <updated>2020-11-23T14:40:59.920Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;硬件配置&quot;&gt;&lt;a href=&quot;#硬件配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="折腾" scheme="https://yibiner.github.io/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="Unraid" scheme="https://yibiner.github.io/tags/Unraid/"/>
+    
+      <category term="NAS" scheme="https://yibiner.github.io/tags/NAS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【小技巧】python3 释放、限制内存</title>
+    <link href="https://yibiner.github.io/2020/09/16/xiao-ji-qiao-python3-shi-fang-xian-zhi-nei-cun/"/>
+    <id>https://yibiner.github.io/2020/09/16/xiao-ji-qiao-python3-shi-fang-xian-zhi-nei-cun/</id>
+    <published>2020-09-16T11:42:13.000Z</published>
+    <updated>2020-09-23T14:28:48.123Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="小技巧" scheme="https://yibiner.github.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Python" scheme="https://yibiner.github.io/tags/Python/"/>
+    
+      <category term="内存" scheme="https://yibiner.github.io/tags/%E5%86%85%E5%AD%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【JAVA】线程池代码的一次深入分析</title>
+    <link href="https://yibiner.github.io/2020/09/13/java-xian-cheng-chi-dai-ma-de-yi-ci-shen-ru-fen-xi/"/>
+    <id>https://yibiner.github.io/2020/09/13/java-xian-cheng-chi-dai-ma-de-yi-ci-shen-ru-fen-xi/</id>
+    <published>2020-09-13T03:35:56.000Z</published>
+    <updated>2020-11-23T14:34:32.153Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本文记录了在一次定位线上系统问题时，根据发现的一些问题对JAVA中线程池代码做了下简单的分析。作者水平有限，非喜勿喷。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="https://yibiner.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="JAVA" scheme="https://yibiner.github.io/tags/JAVA/"/>
+    
+      <category term="源码分析" scheme="https://yibiner.github.io/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    
+      <category term="线程池" scheme="https://yibiner.github.io/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
+    
+  </entry>
+  
+</feed>
